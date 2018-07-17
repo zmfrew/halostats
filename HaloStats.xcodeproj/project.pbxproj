@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B62ABE0A20FEA1A500B00ED6 /* PlayerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62ABE0920FEA1A500B00ED6 /* PlayerImage.swift */; };
+		B62ABE0C20FEA34200B00ED6 /* PlayerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62ABE0B20FEA34200B00ED6 /* PlayerImageController.swift */; };
 		B62F6F9B20FE348200ADE458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62F6F9A20FE348200ADE458 /* AppDelegate.swift */; };
 		B62F6F9D20FE348200ADE458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62F6F9C20FE348200ADE458 /* ViewController.swift */; };
 		B62F6FA020FE348200ADE458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62F6F9E20FE348200ADE458 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		B62ABE0920FEA1A500B00ED6 /* PlayerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImage.swift; sourceTree = "<group>"; };
+		B62ABE0B20FEA34200B00ED6 /* PlayerImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImageController.swift; sourceTree = "<group>"; };
 		B62F6F9720FE348200ADE458 /* HaloStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaloStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62F6F9A20FE348200ADE458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B62F6F9C20FE348200ADE458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				B62F6FB420FE3D9300ADE458 /* PlayerController.swift */,
+				B62ABE0B20FEA34200B00ED6 /* PlayerImageController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62ABE0C20FEA34200B00ED6 /* PlayerImageController.swift in Sources */,
 				B62F6FDF20FE4A7F00ADE458 /* Constants.swift in Sources */,
 				B62F6F9D20FE348200ADE458 /* ViewController.swift in Sources */,
 				B62ABE0A20FEA1A500B00ED6 /* PlayerImage.swift in Sources */,

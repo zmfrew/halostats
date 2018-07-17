@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerImage: Codable {
     
-    
+    // MARK: - Properties
+    let playerImageURLAsString: String
     
 }

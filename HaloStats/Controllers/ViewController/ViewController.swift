@@ -41,6 +41,12 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 self.playerKills.text = "\(player.kills)"
                 self.playerDeaths.text = "\(player.deaths)"
             }
+            
+            PlayerImageController.getPlayerImage(by: searchText, completion: { (image) in
+                DispatchQueue.main.async {
+                    self.playerImage.image = image
+                }
+            })
         }
     }
     
