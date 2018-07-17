@@ -38,6 +38,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 self.playerSearchBar.text = ""
                 self.playerGamerTag.text = player.gamertag
                 self.playerRank.text = "\(player.rank)"
+                self.playerKills.text = "\(player.kills)"
+                self.playerDeaths.text = "\(player.deaths)"
             }
         }
     }

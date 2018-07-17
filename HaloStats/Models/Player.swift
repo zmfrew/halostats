@@ -8,27 +8,37 @@
 
 import Foundation
 
-struct Player: Codable {
+class Player: Codable {
     
     // MARK: - Properties
-    private let gamertagKey = "GamerTag"
+    private let gamertagKey = "Id"
     private let rankKey = "SpartanRank"
+    private let killsKey = "TotalKills"
+    private let deathsKey = "TotalDeaths"
     
     let gamertag: String
     let rank: Int
-
+    let kills: Int
+    let deaths: Int
     
     // MARK: - Initializers
-    init?(playerDictionary: [String: Any]) {
-        guard let gamertag = playerDictionary[gamertagKey] as? String, let rank = playerDictionary[rankKey] as? Int else { return nil }
+    init?(playerDictionary: [String : Any]) {
+        guard let resultsArray = playerDictionary["Results"] as? [[String : Any]],
+        let gamertag = resultsArray.first?[gamertagKey] as? String,
+        let resultDictionary = resultsArray.first?["Result"] as? [String : Any],
+        let rank = resultDictionary[rankKey] as? Int,
+        let arenaStatsDictionary = resultDictionary["ArenaStats"] as? [String : Any],
+        let kills = arenaStatsDictionary[killsKey] as? Int,
+        let deaths = arenaStatsDictionary[deathsKey] as? Int
+            else { return nil }
         
         self.gamertag = gamertag
         self.rank = rank
+        self.kills = kills
+        self.deaths = deaths
     }
     
 }
-
-
 
 // https://www.haloapi.com/profile/h5/profiles/{player}/spartan[?size][&crop]
 // crop is 'full' or 'portrait'

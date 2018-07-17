@@ -10,10 +10,6 @@ import UIKit
 
 class PlayerController {
     
-    // MARK: - Properties
-    static let baseURL = URL(string: "https://www.haloapi.com/stats/h5")
-    // "https://www.haloapi.com/stats/h5/servicerecords/arena?players={players}"
-    
     // MARK: - Methods
     static func searchForPlayer(by searchTerm: String, completion: @escaping((Player?) -> Void)) {
         var urlComponents = URLComponents()
@@ -48,12 +44,14 @@ class PlayerController {
                 guard let playerDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : Any] else { completion(nil) ; return }
                 print(playerDictionary)
                 let player = Player(playerDictionary: playerDictionary)
-                print(player)
+                print(player?.gamertag ?? "No player created")
+                print(player?.rank ?? "No player created")
                 completion(player)
             } catch {
                 print("Error decoding Player: \(error)")
             }
         }
+        
         dataTask.resume()
     }
     
