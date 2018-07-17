@@ -11,34 +11,24 @@ import Foundation
 struct Player: Codable {
     
     // MARK: - Properties
+    private let gamertagKey = "GamerTag"
+    private let rankKey = "SpartanRank"
+    
     let gamertag: String
-    let kills: Int
-    let deaths: Int
     let rank: Int
-    let playerImage: PlayerImage
+
     
-    enum CodingKeys: String, CodingKey {
-        case gamertag = "Id"
-        case kills = "TotalKills"
-        case deaths = "TotalDeaths"
-        case rank = "Rank"
-        case playerImage
+    // MARK: - Initializers
+    init?(playerDictionary: [String: Any]) {
+        guard let gamertag = playerDictionary[gamertagKey] as? String, let rank = playerDictionary[rankKey] as? Int else { return nil }
+        
+        self.gamertag = gamertag
+        self.rank = rank
     }
     
 }
 
-// https://www.haloapi.com/stats/h5/servicerecords/arena?players=
 
-struct PlayerImage: Codable {
-    
-    // MARK: - Properties
-    let spartanImageURLAsString: String
-    
-    enum CodingKeys: String, CodingKey {
-        case spartanImageURLAsString = "https://www.haloapi.com/profile/h5/profiles/"
-    }
-    
-}
 
 // https://www.haloapi.com/profile/h5/profiles/{player}/spartan[?size][&crop]
 // crop is 'full' or 'portrait'

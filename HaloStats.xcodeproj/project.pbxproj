@@ -14,6 +14,7 @@
 		B62F6FA520FE348300ADE458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62F6FA320FE348300ADE458 /* LaunchScreen.storyboard */; };
 		B62F6FB320FE364300ADE458 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62F6FB220FE364300ADE458 /* Player.swift */; };
 		B62F6FB520FE3D9300ADE458 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62F6FB420FE3D9300ADE458 /* PlayerController.swift */; };
+		B62F6FDF20FE4A7F00ADE458 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62F6FDE20FE4A7F00ADE458 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B62F6FA620FE348300ADE458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B62F6FB220FE364300ADE458 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B62F6FB420FE3D9300ADE458 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		B62F6FDE20FE4A7F00ADE458 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B62F6FB220FE364300ADE458 /* Player.swift */,
+				B62F6FDE20FE4A7F00ADE458 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62F6FDF20FE4A7F00ADE458 /* Constants.swift in Sources */,
 				B62F6F9D20FE348200ADE458 /* ViewController.swift in Sources */,
 				B62F6FB320FE364300ADE458 /* Player.swift in Sources */,
 				B62F6FB520FE3D9300ADE458 /* PlayerController.swift in Sources */,
