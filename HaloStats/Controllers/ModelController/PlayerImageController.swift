@@ -17,9 +17,7 @@ class PlayerImageController {
             urlComponents.path = "/profile/h5/profiles/" + searchTerm + "/spartan"
             
             guard let url = urlComponents.url else { completion(nil) ; return }
-            
-            print(url)
-            
+                        
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "GET"
             urlRequest.addValue(apiKey1, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
@@ -36,7 +34,6 @@ class PlayerImageController {
                     completion(nil)
                     return
                 }
-                print("------>THIS IS THE DATA \(data)")
     
                 let image = UIImage(data: data)
                 completion(image)
