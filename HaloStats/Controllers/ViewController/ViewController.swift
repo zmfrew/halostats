@@ -14,6 +14,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         playerSearchBar.delegate = self
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!)
     }
 
     // MARK: - Outlets
