@@ -39,6 +39,3 @@ class Player: Codable {
     }
     
 }
-
-// https://www.haloapi.com/profile/h5/profiles/{player}/spartan[?size][&crop]
-// crop is 'full' or 'portrait'
