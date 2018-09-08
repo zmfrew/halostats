@@ -23,7 +23,7 @@ class PlayerController {
                 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
-        urlRequest.addValue(apiKey1, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+        urlRequest.addValue(Constants.apiKey1, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
         
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, _, error) in
             if let error = error {

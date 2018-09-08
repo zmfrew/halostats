@@ -20,8 +20,8 @@ class PlayerImageController {
                         
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "GET"
-            urlRequest.addValue(apiKey1, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
-    
+            urlRequest.addValue(Constants.apiKey1, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+            print(urlRequest)
             let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, _, error) in
                 if let error = error {
                     print("Error getting Player image: \(error.localizedDescription)")
