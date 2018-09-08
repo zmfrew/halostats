@@ -29,7 +29,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text, !searchText.isEmpty else {
             self.playerSearchBar.text = ""
-            searchBar.resignFirstResponder()
+            playerSearchBar.resignFirstResponder()
             return
         }
         
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             
             DispatchQueue.main.async {
                 self.playerSearchBar.text = ""
-                searchBar.resignFirstResponder()
+                self.playerSearchBar.resignFirstResponder()
                 self.playerGamerTag.text = player.gamertag
                 self.playerRank.text = "\(player.rank)"
                 self.playerKills.text = "\(player.kills)"

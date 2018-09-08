@@ -19,7 +19,6 @@ class PlayerImageController {
             guard let url = urlComponents.url else { completion(nil) ; return }
                         
             var urlRequest = URLRequest(url: url)
-            urlRequest.httpMethod = "GET"
             urlRequest.addValue(Constants.apiKey1, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
             print(urlRequest)
             let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, _, error) in
